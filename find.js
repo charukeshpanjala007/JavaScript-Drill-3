@@ -1,24 +1,24 @@
 const array = require("./arrays.js")
 
-const cbFunction = (currentValue, searchValue, index) => {
+const cbFunction = (currentValue, searchValue) => {
     if(currentValue===searchValue){
-        return (`The searched value ${searchValue} is at ${index} index`)
+        return true
     }
 }
 
 
 
-const reduce = (array, cb = cbFunction) => {
+const find = (array, cb = cbFunction) => {
     if (Array.isArray(array)){
         for (let index = 0; index < array.length; index++) {
             let currentValue = array[index]
             const output = cbFunction(currentValue, 5, index)
             if(output){
-                return output
+                return (`The searched value ${currentValue} is at index ${index}`)
             }
         }
     }
 }
-module.exports = reduce
+module.exports = find
 
 
