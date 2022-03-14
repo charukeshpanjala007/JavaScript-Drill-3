@@ -10,7 +10,7 @@ const cbFunction = (previousValue, currentValue) => {
 
 
 const reduce = (array, cb = cbFunction, startingValue) => {
-    if (array) {
+    if (Array.isArray(array)) {
         let previousValue = array[0]
         let currentValue
         let index = 1
@@ -18,7 +18,7 @@ const reduce = (array, cb = cbFunction, startingValue) => {
             previousValue = startingValue
             index = 0
         }
-        for (index ; index < array.length; index++) {
+        for (index; index < array.length; index++) {
             currentValue = array[index]
             previousValue = cbFunction(previousValue, currentValue)
         }
