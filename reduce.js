@@ -1,6 +1,3 @@
-const array = require("./arrays.js")
-const startingValue = array[0]
-
 const cbFunction = (previousValue, currentValue) => {
     if (currentValue) {
         return (previousValue + currentValue)
@@ -8,18 +5,17 @@ const cbFunction = (previousValue, currentValue) => {
 }
 
 
-
 const reduce = (array, cb = cbFunction, startingValue) => {
     if (Array.isArray(array)) {
         let previousValue = array[0]
         let currentValue
-        let index = 1
         if (startingValue) {
-            previousValue = startingValue
-            index = 0
+            previousValue = startingValue  
+        }else{
+            previousValue = array[0]
         }
-        for (index; index < array.length; index++) {
-            currentValue = array[index]
+        for (let index=0; index < array.length-1; index++) {
+            currentValue = array[index+1]
             previousValue = cbFunction(previousValue, currentValue)
         }
         return previousValue

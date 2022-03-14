@@ -1,5 +1,3 @@
-const array = require("./arrays.js")
-
 const cbFunction = (currentValue) => {
     if (currentValue % 2 === 0) {
         return currentValue

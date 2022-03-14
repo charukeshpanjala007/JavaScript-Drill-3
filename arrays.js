@@ -60,3 +60,4 @@ function flatten(elements) {
 }
 
 module.exports = items
+module.exports = nestedArray

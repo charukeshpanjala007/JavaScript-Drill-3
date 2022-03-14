@@ -1,8 +1,5 @@
-const array = require("./arrays.js")
-
-
 const cbFunction = (element, index) => {
-    return (`Square of element at index ${index} is ${element*element}`)
+    return (`Square of element at index ${index} is ${element * element}`)
 
 }
 
@@ -15,7 +12,7 @@ const map = function (array, cb = cbFunction) {
             outputArray.push(newElement)
         }
         return outputArray
-    } 
+    }
     return "Invalid Input"
 }
 
