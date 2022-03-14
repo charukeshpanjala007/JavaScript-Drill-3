@@ -4,7 +4,7 @@ const cbFunction = (element, index) => {
 }
 
 const array = [1, 2, 3, 4, 5, 5]
-const eachFunction = function (array, cb = cbFunction) {
+const each = function (array, cb = cbFunction) {
     if (Array.isArray(array)) {
         for (let index = 0; index < array.length; index++) {
             element = array[index]
@@ -16,4 +16,4 @@ const eachFunction = function (array, cb = cbFunction) {
 }
 
 
-module.exports = eachFunction 
+module.exports = each

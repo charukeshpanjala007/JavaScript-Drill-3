@@ -6,7 +6,7 @@ const cbFunction = (element, index) => {
 
 }
 
-const mapFunction = function (array, cb = cbFunction) {
+const map = function (array, cb = cbFunction) {
     if (Array.isArray(array)) {
         let outputArray = []
         for (let index = 0; index < array.length; index++) {
@@ -20,4 +20,5 @@ const mapFunction = function (array, cb = cbFunction) {
 }
 
 
-module.exports = mapFunction 
+module.exports = map
+
