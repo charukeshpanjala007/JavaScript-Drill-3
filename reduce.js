@@ -19,7 +19,7 @@ const reduce = (array, cb = cbFunction, startingValue) => {
         }
         for (index; index < array.length; index++) {
             currentValue = array[index]
-            previousValue = cbFunction(previousValue, currentValue)
+            previousValue = cbFunction(previousValue, currentValue,index, array)
         }
         return previousValue
     }

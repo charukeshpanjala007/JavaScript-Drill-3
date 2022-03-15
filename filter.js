@@ -1,6 +1,6 @@
-const cbFunction = (currentValue) => {
+const cbFunction = (currentValue, index, array) => {
     if (currentValue % 2 === 0) {
-        return currentValue
+        return true
     }
 }
 
@@ -11,7 +11,7 @@ const filter = (array, cb = cbFunction) => {
     if (Array.isArray(array)) {
         for (let index = 0; index < array.length; index++) {
             let currentValue = array[index]
-            const result = cbFunction(currentValue)
+            const result = cbFunction(currentValue, index, array)
             if (result) {
                 output.push(currentValue)
             }
